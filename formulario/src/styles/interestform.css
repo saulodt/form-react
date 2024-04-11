@@ -1,0 +1,697 @@
+.formContainer {
+  width: 900px;
+  font-family: 'Manrope', sans-serif;
+  background: var(--cor-fundoPainel);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 60px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+/* ------------ Títulos ------------ */
+  
+.formTitle {
+  color: var(--cor-titulo);
+  text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.219);
+  text-indent: 30px;
+}
+
+.formSubTitle {
+  padding: 20px 25px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--cor-label);
+}
+
+label {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--cor-label);
+}
+
+/* ------------ Colunas - Inputs ------------ */
+
+.dualColumns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* << Divide em duas colunas de largura igual */
+  row-gap: 20px;
+  column-gap: 60px;
+  margin: 30px 0px 40px 60px;
+}
+
+/* ------------ Inputs ------------ */ 
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.inputGroup input:focus {
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  outline: none; /* << Remove o contorno padrão quando está em foco foco */
+}
+
+.inputGroup input[type="text"],
+.inputGroup input[type="email"],
+.inputGroup input[type="number"],
+.inputGroup textarea {
+  width: 70%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: none;
+  box-shadow:  0.1em 0.1em 0.2em rgba(0, 0, 0, 0.219);
+}
+
+/* ------------ Botão Volume ------------ */
+
+.volumeControl {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.volumeControl input[type="number"] {
+  text-align: center;
+  padding: 0px 0px 0px 15px;
+  width: 70px;
+  border: none;
+  box-shadow:  0.1em 0.1em 0.2em rgba(0, 0, 0, 0.219);
+}
+
+.volumeButtons {
+  display: flex;
+}
+
+.volumeControl button {
+  padding: 12px 15px;
+  /* margin: 0 5px; */
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+.volumeControl .lessButton {
+  border-radius: 0px 10px 10px 0px;
+  background: var(--cor-botaoEsquerdo);
+  box-shadow:  0.1em 0.1em 0.2em rgba(0, 0, 0, 0.219);
+}
+
+.volumeControl .plusButton {
+  border-radius: 10px 0px 0px 10px;
+  background: var(--cor-botaoDireito);
+  box-shadow:  0.1em 0.1em 0.2em rgba(0, 0, 0, 0.219);
+}
+
+/* ------------ Inputs Type=Radio ------------ */
+
+.radioGroup, .checkboxGroup {
+  margin: 20px 0;
+}
+
+.radioGroup label,
+.checkboxGroup label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.productOption {
+    margin-left: 25px;
+}
+
+.descriptionOption {
+  margin-left: 13%;
+}
+
+/* ------------ Botão Enviar ------------ */
+
+.submitButton {
+  display: block;
+  width: 15%;
+  padding: 10px;
+  margin: 50px 70px;
+  background: var(--cor-botaoContinuar);
+  color: var(--cor-botaoTexto);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+  /* =========================================== Dividindo os produtos em duas colunas ========================================================== */
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 20px;
+}
+
+.productsGrid input {
+  margin: 0px 10px;
+}
+
+.productsGrid label {
+  display: flex;
+  align-items: center;
+}
+
+.productsGrid input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+  /* ========================================== text-area =========================================================== */
+
+.textareaContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px;
+}
+  
+.largeTextarea {
+  width: 95%;
+  height: 150px;
+  margin-top: 10px;
+  resize: vertical; /* << Permite que o usuário redimensione o textarea verticalmente */
+}
+
+.textareaContainer textarea:focus {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+}
+
+
+  /* ========================================== Politica de Privacidade =========================================================== */
+
+.privacyPolicy {
+  margin: 50px 25px;
+}
+
+.privacyPolicy label {
+  margin: 0px 10px;
+}
+
+ /* ========================================== footer =========================================================== */
+
+.formFooter {
+  width: calc(100% - 0px);
+  margin: 0 auto;
+  padding: 20px 20px;
+  background: var(--cor-footer);
+  text-align: center;
+  font-size: 12px;
+  border-top: 1px solid #ccc;
+  color: #ffffff;
+  box-sizing: border-box; /* Garante que padding não adicione largura total */
+  border-radius: 0px 0px 10px 10px;
+}
+
+
+ /* ========================================== pop-up =========================================================== */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.popup {
+  width: 500px;
+  height: 200px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup img {
+  width: 13%;
+  margin: 25px;
+}
+
+.popup label {
+  color: #05FF00;
+  text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.219);
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  outline: none;
+}
+  
+.popup button {
+  display: block;
+  width: 30%;
+  padding: 10px;
+  margin: 25px 70px;
+  background: linear-gradient(90deg, rgba(49,46,212,1) 0%, rgba(59,112,230,1) 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+  /* ========================================== Botão Alterar Tema =========================================================== */
+
+.switch {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+  
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+  
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: var(--cor-fundoSlider);
+  transition: .4s;
+  border-radius: 34px;
+  border: none;
+  /* width: 59px;
+  height: 33px; */
+}
+  
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  transition: .4s;
+  border-radius: 50%;
+}
+  
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--cor-sombraSlider);
+}
+  
+input:checked + .slider:before {
+  transform: translateX(26px); /* Distancia que o botão vai percorrer */
+}
+
+  /* ========================================== Responsividade =========================================================== */
+
+  /* ========================================== 769px - 1000px =========================================================== */
+
+@media (min-width: 769px) and (max-width: 1000px) {
+
+  .formContainer {
+    width: 85%;
+    padding-top: 50px;
+  }
+
+  .formTitle {
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .dualColumns {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px 45px;
+  }
+
+  .inputGroup input[type="text"],
+  .inputGroup input[type="email"],
+  .inputGroup input[type="number"],
+  .inputGroup textarea {
+    width: 90%;
+  }
+
+  .formRadio {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .formRadio label {
+    flex: 1; /* << Faz com que cada label ocupe um espaço igual no contêiner */
+    white-space: normal;
+  }
+
+  .descriptionOption {
+    margin-left: 0;
+  }
+
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .largeTextarea {
+    width: 93%;
+  }
+
+  .submitButton {
+    width: 30%;
+    margin: 50px auto;
+  }
+
+  .formFooter {
+    padding: 20px 15px;
+  }
+
+   /* ========================================== Pop-up =========================================================== */
+
+  .popup {
+    width: 415px;
+  }
+  
+  .popup img {
+    width: 13%;
+    margin: 25px;
+  }
+
+  /* ========================================== Botão Alterar Tema =========================================================== */
+
+  .switch {
+    width: 52px;
+    height: 28px;
+  }
+  
+  .switch .slider:before {
+    height: 22px;
+    width: 22px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(22px);
+  }
+}
+
+  /* ========================================== 481px - 768px =========================================================== */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .formContainer {
+    width: 80%;
+    padding-top: 40px;
+  }
+
+  .formTitle {
+    text-align: center;
+    font-size: 25px;
+    margin: 30px 20px 50px 0px;
+  }
+
+  .inputGroup input[type="text"],
+  .inputGroup input[type="email"],
+  .inputGroup input[type="number"],
+  .inputGroup textarea,
+  .largeTextarea {
+    width: 80%;
+  }
+
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0 15px 60px;
+  }
+  
+  .dualColumns {
+    grid-template-columns: 1fr;
+    margin: 30px 20px;
+  }
+
+  .volumeControl {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 0 0 0 60px;
+  }
+  
+  .formRadio {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .formRadio label {
+    flex: 1;
+    white-space: normal; /* << Garante que o texto possa quebrar normalmente */
+    font-size: 14px;
+  }
+
+  .descriptionOption {
+    margin: 0 20px 0 0;
+  }
+
+  .productsGrid label {
+    font-size: 14px;
+  }
+
+  .largeTextarea {
+    width: 90%;
+  }
+
+  .textareaContainer label {
+    font-size: 14px;
+  }
+
+  .submitButton {
+    width: 30%;
+    margin: 50px auto;
+  }
+
+
+  .privacyPolicy label {
+    font-size: 14px;
+  }
+
+  .formFooter {
+    padding: 20px;
+  }
+
+  /* ========================================== pop-up =========================================================== */
+    
+  .popup {
+    width: 330px;
+ 
+  }
+   
+  .popup img {
+    width: 13%;
+    margin: 25px;
+  }
+   
+  .popup label {
+    font-size: 16px;
+  }
+
+  /* ========================================== Botão Alterar Tema =========================================================== */
+
+  .switch {
+    width: 44px;
+    height: 26px;
+  }
+    
+  .slider:before {
+    height: 20px;
+    width: 20px;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(16px);
+  }
+}
+
+  /* ========================================== 480px =========================================================== */
+
+@media (max-width: 480px) {
+  .formContainer {
+    width: 95%;
+    padding-top: 30px;
+  }
+
+  .formTitle {
+    text-align: center;
+    font-size: 23px;
+    margin: 30px 20px 50px 0px;
+  }
+
+  .inputGroup input[type="text"],
+  .inputGroup input[type="email"],
+  .inputGroup input[type="number"],
+  .inputGroup textarea,
+  .largeTextarea {
+    padding: 12px;
+    width: 80%;
+  }
+
+  .dualColumns {
+    grid-template-columns: 1fr; /* << Muda para uma única coluna */
+    margin: 20px 10px;
+  }
+
+  .inputGroup {
+    margin: 0 0 15px 50px;
+  }
+
+  .volumeControl {
+    margin: 0 0 15px 50px;
+  }
+
+  .formRadio {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .formRadio label {
+    flex: 1 1;
+    white-space: normal;
+    font-size: 14px;
+  }
+
+  .descriptionOption {
+    margin: 0 20px 0 0;
+  }
+
+  .productsGrid label {
+    font-size: 14px;
+  }
+
+  .largeTextarea {
+    width: 85%;
+  }
+
+  .textareaContainer label {
+    font-size: 14px;
+  }
+
+  .privacyPolicy label {
+    margin: 0px 10px;
+    font-size: 14px;
+  }
+
+  .submitButton {
+    width: 30%;
+    margin: 50px 145px;
+  }
+
+  .formFooter {
+    padding: 20px;
+    font-size: 10px;
+  }
+
+  /* ========================================== pop-up =========================================================== */
+  
+  .popup {
+    width: 275px;
+    height: 185px;
+  }
+     
+  .popup img {
+    width: 15%;
+    margin: 20px;
+  }
+     
+  .popup label {
+    font-size: 15px;
+  }
+       
+  .popup button {
+    margin: 20px 70px;
+  }
+
+    /* ========================================== Botão Alterar Tema =========================================================== */
+
+    .switch {
+      width: 44px;
+      height: 26px;
+    }
+      
+    .slider:before {
+      height: 20px;
+      width: 20px;
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(16px);
+    }
+}
+
+  /* ========================================== 412px =========================================================== */
+
+@media (max-width: 412px) {
+
+  .formTitle {
+    margin: 30px 20px 45px 0px;
+  }
+
+  .descriptionOption {
+    margin-left: 0;
+  }
+
+  .submitButton {
+    width: 30%;
+    margin: 50px 132px;
+  }
+
+  /* ========================================== pop-up =========================================================== */
+         
+  .popup {
+    width: 240px;
+    height: 165px;
+  }
+       
+  .popup img {
+    width: 15%;
+    margin: 20px;
+  }
+       
+  .popup label {
+    font-size: 13px;
+  }
+         
+  .popup button {
+    margin: 20px 70px;
+  }
+
+  /* ========================================== Botão Alterar Tema =========================================================== */
+
+  .switch {
+    width: 44px;
+    height: 26px;
+  }
+      
+  .slider:before {
+    height: 20px;
+    width: 20px;
+  }
+    
+  input:checked + .slider:before {
+    transform: translateX(16px);
+  }
+
+}

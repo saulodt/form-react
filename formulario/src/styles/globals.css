@@ -1,0 +1,36 @@
+:root {
+  --cor-fundoPainel: rgba(255, 255, 255, 0.26);
+  --cor-titulo: #3d34ba;
+  --cor-label: #273464;
+  --cor-botaoEsquerdo: linear-gradient(90deg, rgba(84,116,230,1) 0%, rgba(11,7,217,1) 100%);
+  --cor-botaoDireito: linear-gradient(264deg, rgba(84,116,230,1) 0%, rgba(11,7,217,1) 100%);
+  --cor-botaoTexto: #FFF;
+  --cor-botaoContinuar: linear-gradient(90deg, rgba(49,46,212,1) 0%, rgba(59,112,230,1) 100%);
+  --cor-footer: linear-gradient(0deg, rgba(32, 29, 231, 0.959) 40%, rgba(25, 22, 211, 0.644) 100%);
+  --imagemFundo: url("/img/zyro-image.png");
+  --cor-fundoSlider: #fff;
+  --cor-sombraSlider: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  padding: 40px 0 40px 0;
+  background-image: var(--imagemFundo);
+  background-repeat: no-repeat;
+  background-size: cover; /* << Garante que a imagem de fundo cubra todo o espaço disponível */
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* << Assegura que o body tenha pelo menos a altura da tela */
+}
+
+@media (min-width: 769px) and (max-width: 1570px) {
+  body {
+    min-height: 100vh;
+  }
+}
